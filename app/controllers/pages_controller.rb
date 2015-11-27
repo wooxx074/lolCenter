@@ -1,13 +1,16 @@
 class PagesController < ApplicationController
-  def index
-  end
-
   def home
   end
 
-  def profile
+  def index
   end
 
-  def explore
+  def player
+  end
+
+  def team
+  end
+
+  def league
   end
 end

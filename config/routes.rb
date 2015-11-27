@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   get '/home' => 'pages#home' #goes straight to URL/home instead of URL/pages/home
   get '/profile' => 'pages#profile'
   get '/explore' => 'pages#explore'
+  get '/player' => 'pages#player'
+  get '/team' => 'pages#team'
+  get '/league' => 'pages#league'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
