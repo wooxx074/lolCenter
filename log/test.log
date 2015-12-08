@@ -1,0 +1,255 @@
+  [1m[36m (12.5ms)[0m  [1mCREATE TABLE "players" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "team" varchar, "position" varchar, "league" varchar, "accounts" varchar, "stream" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (9.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.8ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (7.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (6.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151127160544')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "players"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "players" ("name", "team", "position", "league", "accounts", "stream", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2015-11-28 17:34:03', '2015-11-28 17:34:03', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "players" ("name", "team", "position", "league", "accounts", "stream", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2015-11-28 17:34:03', '2015-11-28 17:34:03', 298486374)[0m
+  [1m[35m (7.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------
+PlayerTest: test_should_be_valid
+--------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "players"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "players" ("name", "team", "position", "league", "accounts", "stream", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2015-11-28 17:35:24', '2015-11-28 17:35:24', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "players" ("name", "team", "position", "league", "accounts", "stream", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2015-11-28 17:35:24', '2015-11-28 17:35:24', 298486374)[0m
+  [1m[35m (15.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------
+PlayerTest: test_name_should_be_present
+---------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------
+PlayerTest: test_should_be_valid
+--------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "players"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "players" ("name", "team", "position", "league", "accounts", "stream", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2015-11-28 18:23:49', '2015-11-28 18:23:49', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "players" ("name", "team", "position", "league", "accounts", "stream", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2015-11-28 18:23:49', '2015-11-28 18:23:49', 298486374)[0m
+  [1m[35m (11.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------
+PlayerTest: test_name_should_be_present
+---------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------
+PlayerTest: test_should_be_valid
+--------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "players"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "players" ("name", "team", "position", "league", "accounts", "stream", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2015-11-28 18:36:03', '2015-11-28 18:36:03', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "players" ("name", "team", "position", "league", "accounts", "stream", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2015-11-28 18:36:03', '2015-11-28 18:36:03', 298486374)[0m
+  [1m[35m (9.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------
+PlayerTest: test_should_be_valid
+--------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------
+PlayerTest: test_name_should_be_present
+---------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "players"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "players" ("name", "team", "position", "league", "accounts", "stream", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2015-11-28 18:42:01', '2015-11-28 18:42:01', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "players" ("name", "team", "position", "league", "accounts", "stream", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2015-11-28 18:42:01', '2015-11-28 18:42:01', 298486374)[0m
+  [1m[35m (21.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------
+PlayerTest: test_name_should_be_present
+---------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------
+PlayerTest: test_should_be_valid
+--------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------
+PlayerTest: test_team_should_be_present
+---------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "players"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "players" ("name", "position", "league", "accounts", "stream", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2015-12-07 03:49:07', '2015-12-07 03:49:07', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "players" ("name", "position", "league", "accounts", "stream", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2015-12-07 03:49:07', '2015-12-07 03:49:07', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "teams"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "teams" ("name", "region", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-12-07 03:49:07', '2015-12-07 03:49:07', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "teams" ("name", "region", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-12-07 03:49:07', '2015-12-07 03:49:07', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "matches"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "matches" ("content", "user_id", "created_at", "updated_at", "id") VALUES ('MyText', NULL, '2015-12-07 03:49:07', '2015-12-07 03:49:07', 980190962)
+SQLite3::SQLException: table matches has no column named user_id: INSERT INTO "matches" ("content", "user_id", "created_at", "updated_at", "id") VALUES ('MyText', NULL, '2015-12-07 03:49:07', '2015-12-07 03:49:07', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "players"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "players" ("name", "position", "league", "accounts", "stream", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2015-12-07 03:49:07', '2015-12-07 03:49:07', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "players" ("name", "position", "league", "accounts", "stream", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2015-12-07 03:49:07', '2015-12-07 03:49:07', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "teams"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "teams" ("name", "region", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-12-07 03:49:07', '2015-12-07 03:49:07', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "teams" ("name", "region", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-12-07 03:49:07', '2015-12-07 03:49:07', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "matches"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "matches" ("content", "user_id", "created_at", "updated_at", "id") VALUES ('MyText', NULL, '2015-12-07 03:49:07', '2015-12-07 03:49:07', 980190962)
+SQLite3::SQLException: table matches has no column named user_id: INSERT INTO "matches" ("content", "user_id", "created_at", "updated_at", "id") VALUES ('MyText', NULL, '2015-12-07 03:49:07', '2015-12-07 03:49:07', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "players"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "players" ("name", "position", "league", "accounts", "stream", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2015-12-07 03:49:07', '2015-12-07 03:49:07', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "players" ("name", "position", "league", "accounts", "stream", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2015-12-07 03:49:07', '2015-12-07 03:49:07', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "teams"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "teams" ("name", "region", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-12-07 03:49:07', '2015-12-07 03:49:07', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "teams" ("name", "region", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-12-07 03:49:07', '2015-12-07 03:49:07', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "matches"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "matches" ("content", "user_id", "created_at", "updated_at", "id") VALUES ('MyText', NULL, '2015-12-07 03:49:07', '2015-12-07 03:49:07', 980190962)
+SQLite3::SQLException: table matches has no column named user_id: INSERT INTO "matches" ("content", "user_id", "created_at", "updated_at", "id") VALUES ('MyText', NULL, '2015-12-07 03:49:07', '2015-12-07 03:49:07', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "players"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "players" ("name", "position", "league", "accounts", "stream", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2015-12-07 03:49:07', '2015-12-07 03:49:07', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "players" ("name", "position", "league", "accounts", "stream", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2015-12-07 03:49:07', '2015-12-07 03:49:07', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "teams"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "teams" ("name", "region", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-12-07 03:49:07', '2015-12-07 03:49:07', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "teams" ("name", "region", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-12-07 03:49:07', '2015-12-07 03:49:07', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "matches"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "matches" ("content", "user_id", "created_at", "updated_at", "id") VALUES ('MyText', NULL, '2015-12-07 03:49:07', '2015-12-07 03:49:07', 980190962)
+SQLite3::SQLException: table matches has no column named user_id: INSERT INTO "matches" ("content", "user_id", "created_at", "updated_at", "id") VALUES ('MyText', NULL, '2015-12-07 03:49:07', '2015-12-07 03:49:07', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "players"[0m
+  [1m[35mFixture Insert (2.4ms)[0m  INSERT INTO "players" ("name", "position", "league", "accounts", "stream", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2015-12-07 03:49:07', '2015-12-07 03:49:07', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "players" ("name", "position", "league", "accounts", "stream", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2015-12-07 03:49:07', '2015-12-07 03:49:07', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "teams"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "teams" ("name", "region", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-12-07 03:49:07', '2015-12-07 03:49:07', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "teams" ("name", "region", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-12-07 03:49:07', '2015-12-07 03:49:07', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "matches"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "matches" ("content", "user_id", "created_at", "updated_at", "id") VALUES ('MyText', NULL, '2015-12-07 03:49:07', '2015-12-07 03:49:07', 980190962)
+SQLite3::SQLException: table matches has no column named user_id: INSERT INTO "matches" ("content", "user_id", "created_at", "updated_at", "id") VALUES ('MyText', NULL, '2015-12-07 03:49:07', '2015-12-07 03:49:07', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "players"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "players" ("name", "position", "league", "accounts", "stream", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2015-12-07 03:49:07', '2015-12-07 03:49:07', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "players" ("name", "position", "league", "accounts", "stream", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2015-12-07 03:49:07', '2015-12-07 03:49:07', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "teams"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "teams" ("name", "region", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-12-07 03:49:07', '2015-12-07 03:49:07', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "teams" ("name", "region", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-12-07 03:49:07', '2015-12-07 03:49:07', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "matches"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "matches" ("content", "user_id", "created_at", "updated_at", "id") VALUES ('MyText', NULL, '2015-12-07 03:49:07', '2015-12-07 03:49:07', 980190962)
+SQLite3::SQLException: table matches has no column named user_id: INSERT INTO "matches" ("content", "user_id", "created_at", "updated_at", "id") VALUES ('MyText', NULL, '2015-12-07 03:49:07', '2015-12-07 03:49:07', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "players"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "players" ("name", "position", "league", "accounts", "stream", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2015-12-07 03:49:07', '2015-12-07 03:49:07', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "players" ("name", "position", "league", "accounts", "stream", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2015-12-07 03:49:07', '2015-12-07 03:49:07', 298486374)[0m
+  [1m[35mFixture Delete (2.2ms)[0m  DELETE FROM "teams"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "teams" ("name", "region", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-12-07 03:49:07', '2015-12-07 03:49:07', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "teams" ("name", "region", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-12-07 03:49:07', '2015-12-07 03:49:07', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "matches"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "matches" ("content", "user_id", "created_at", "updated_at", "id") VALUES ('MyText', NULL, '2015-12-07 03:49:07', '2015-12-07 03:49:07', 980190962)
+SQLite3::SQLException: table matches has no column named user_id: INSERT INTO "matches" ("content", "user_id", "created_at", "updated_at", "id") VALUES ('MyText', NULL, '2015-12-07 03:49:07', '2015-12-07 03:49:07', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.6ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "players"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "players" ("name", "position", "league", "accounts", "stream", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2015-12-07 03:49:07', '2015-12-07 03:49:07', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "players" ("name", "position", "league", "accounts", "stream", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2015-12-07 03:49:07', '2015-12-07 03:49:07', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "teams"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "teams" ("name", "region", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-12-07 03:49:07', '2015-12-07 03:49:07', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "teams" ("name", "region", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-12-07 03:49:07', '2015-12-07 03:49:07', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "matches"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "matches" ("content", "user_id", "created_at", "updated_at", "id") VALUES ('MyText', NULL, '2015-12-07 03:49:07', '2015-12-07 03:49:07', 980190962)
+SQLite3::SQLException: table matches has no column named user_id: INSERT INTO "matches" ("content", "user_id", "created_at", "updated_at", "id") VALUES ('MyText', NULL, '2015-12-07 03:49:07', '2015-12-07 03:49:07', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "players"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "players" ("name", "position", "league", "accounts", "stream", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2015-12-07 03:49:07', '2015-12-07 03:49:07', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "players" ("name", "position", "league", "accounts", "stream", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2015-12-07 03:49:07', '2015-12-07 03:49:07', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "teams"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "teams" ("name", "region", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-12-07 03:49:07', '2015-12-07 03:49:07', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "teams" ("name", "region", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-12-07 03:49:07', '2015-12-07 03:49:07', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "matches"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "matches" ("content", "user_id", "created_at", "updated_at", "id") VALUES ('MyText', NULL, '2015-12-07 03:49:07', '2015-12-07 03:49:07', 980190962)
+SQLite3::SQLException: table matches has no column named user_id: INSERT INTO "matches" ("content", "user_id", "created_at", "updated_at", "id") VALUES ('MyText', NULL, '2015-12-07 03:49:07', '2015-12-07 03:49:07', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "players"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "players" ("name", "position", "league", "accounts", "stream", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2015-12-07 03:49:07', '2015-12-07 03:49:07', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "players" ("name", "position", "league", "accounts", "stream", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2015-12-07 03:49:07', '2015-12-07 03:49:07', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "teams"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "teams" ("name", "region", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-12-07 03:49:07', '2015-12-07 03:49:07', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "teams" ("name", "region", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-12-07 03:49:07', '2015-12-07 03:49:07', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "matches"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "matches" ("content", "user_id", "created_at", "updated_at", "id") VALUES ('MyText', NULL, '2015-12-07 03:49:07', '2015-12-07 03:49:07', 980190962)
+SQLite3::SQLException: table matches has no column named user_id: INSERT INTO "matches" ("content", "user_id", "created_at", "updated_at", "id") VALUES ('MyText', NULL, '2015-12-07 03:49:07', '2015-12-07 03:49:07', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.0ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "players"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "players" ("name", "position", "league", "accounts", "stream", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2015-12-07 03:51:08', '2015-12-07 03:51:08', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "players" ("name", "position", "league", "accounts", "stream", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2015-12-07 03:51:08', '2015-12-07 03:51:08', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "teams"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "teams" ("name", "region", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-12-07 03:51:08', '2015-12-07 03:51:08', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "teams" ("name", "region", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-12-07 03:51:08', '2015-12-07 03:51:08', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "matches"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "matches" ("content", "user_id", "created_at", "updated_at", "id") VALUES ('MyText', NULL, '2015-12-07 03:51:08', '2015-12-07 03:51:08', 980190962)
+SQLite3::SQLException: table matches has no column named user_id: INSERT INTO "matches" ("content", "user_id", "created_at", "updated_at", "id") VALUES ('MyText', NULL, '2015-12-07 03:51:08', '2015-12-07 03:51:08', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "players"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "players" ("name", "position", "league", "accounts", "stream", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2015-12-07 03:51:08', '2015-12-07 03:51:08', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "players" ("name", "position", "league", "accounts", "stream", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2015-12-07 03:51:08', '2015-12-07 03:51:08', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "teams"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "teams" ("name", "region", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-12-07 03:51:08', '2015-12-07 03:51:08', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "teams" ("name", "region", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-12-07 03:51:08', '2015-12-07 03:51:08', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "matches"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "matches" ("content", "user_id", "created_at", "updated_at", "id") VALUES ('MyText', NULL, '2015-12-07 03:51:08', '2015-12-07 03:51:08', 980190962)
+SQLite3::SQLException: table matches has no column named user_id: INSERT INTO "matches" ("content", "user_id", "created_at", "updated_at", "id") VALUES ('MyText', NULL, '2015-12-07 03:51:08', '2015-12-07 03:51:08', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "players"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "players" ("name", "position", "league", "accounts", "stream", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2015-12-07 03:52:10', '2015-12-07 03:52:10', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "players" ("name", "position", "league", "accounts", "stream", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2015-12-07 03:52:10', '2015-12-07 03:52:10', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "teams"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "teams" ("name", "region", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-12-07 03:52:10', '2015-12-07 03:52:10', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "teams" ("name", "region", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-12-07 03:52:10', '2015-12-07 03:52:10', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "matches"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "matches" ("content", "user_id", "created_at", "updated_at", "id") VALUES ('MyText', NULL, '2015-12-07 03:52:10', '2015-12-07 03:52:10', 980190962)
+SQLite3::SQLException: table matches has no column named user_id: INSERT INTO "matches" ("content", "user_id", "created_at", "updated_at", "id") VALUES ('MyText', NULL, '2015-12-07 03:52:10', '2015-12-07 03:52:10', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "players"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "players" ("name", "position", "league", "accounts", "stream", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2015-12-07 03:52:10', '2015-12-07 03:52:10', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "players" ("name", "position", "league", "accounts", "stream", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2015-12-07 03:52:10', '2015-12-07 03:52:10', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "teams"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "teams" ("name", "region", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-12-07 03:52:10', '2015-12-07 03:52:10', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "teams" ("name", "region", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-12-07 03:52:10', '2015-12-07 03:52:10', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "matches"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "matches" ("content", "user_id", "created_at", "updated_at", "id") VALUES ('MyText', NULL, '2015-12-07 03:52:10', '2015-12-07 03:52:10', 980190962)
+SQLite3::SQLException: table matches has no column named user_id: INSERT INTO "matches" ("content", "user_id", "created_at", "updated_at", "id") VALUES ('MyText', NULL, '2015-12-07 03:52:10', '2015-12-07 03:52:10', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "players"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "players" ("name", "position", "league", "accounts", "stream", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2015-12-07 03:54:22', '2015-12-07 03:54:22', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "players" ("name", "position", "league", "accounts", "stream", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2015-12-07 03:54:22', '2015-12-07 03:54:22', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "teams"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "teams" ("name", "region", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-12-07 03:54:22', '2015-12-07 03:54:22', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "teams" ("name", "region", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-12-07 03:54:22', '2015-12-07 03:54:22', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "matches"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "matches" ("content", "user_id", "created_at", "updated_at", "id") VALUES ('MyText', NULL, '2015-12-07 03:54:22', '2015-12-07 03:54:22', 980190962)
+SQLite3::SQLException: table matches has no column named user_id: INSERT INTO "matches" ("content", "user_id", "created_at", "updated_at", "id") VALUES ('MyText', NULL, '2015-12-07 03:54:22', '2015-12-07 03:54:22', 980190962)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m

@@ -20,30 +20,22 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">NA LCS <span class="caret"></span></a>
           <ul class="dropdown-menu multi-column columns-2">
             <div class="row">
-              <div class="col-sm-6">
-                <ul class="multi-column-dropdown">
-                  <li><a href="/team">Cloud 9</a></li>
-                  <li><a href="#">Team Solo Mid</a></li>
-                  <li><a href="#">NRG</a></li>
-                  <li><a href="#">Team Liquid</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">One more separated link</a></li>
-                </ul>
+              <% @columnNum = 1 %>
+              <% @teams.each do |team| %>
+                  <% if @columnNum == 1 or @columnNum == 6 %>
+                    <div class="col-sm-6">
+      		            <ul class="multi-column-dropdown">
+  	              <% end %>
+                      <li><a href="/teams/<%= team.name.gsub(" ", "%20") %>"><%= image_tag("/team_icons/#{team.name.tr(" ", "_")}_icon.png", height: '30', :style => 'margin-right: 30px') %><%= team.name %></a></li>
+                    <% if @columnNum == 5 or @columnNum == 10 %>
+      		            </ul>
+    	              </div>
+  	                <% end %>
+                      <% @columnNum += 1 %>  
+                <% end %>
               </div>
-              <div class="col-sm-6">
-		            <ul class="multi-column-dropdown">
-			            <li><a href="#">Action</a></li>
-			            <li><a href="#">Another action</a></li>
-			            <li><a href="#">Something else here</a></li>
-			            <li class="divider"></li>
-			            <li><a href="#">Separated link</a></li>
-			            <li class="divider"></li>
-			            <li><a href="#">One more separated link</a></li>
-		            </ul>
-	            </div>
-            </div>
-          </ul>
-        </li>
+            </ul>
+          </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">EU LCS <span class="caret"></span></a>
           <ul class="dropdown-menu">

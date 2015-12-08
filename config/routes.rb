@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
+  resources :teams, param: :name
   
+  get 'teams/index'
+
+  get 'teams/league'
+  get '/teams/#{:name}', to: 'teams#show', as: '/teamname'
+  get 'players/index'
+
   #root page
   root 'pages#index'
   #Defines routes for Pages

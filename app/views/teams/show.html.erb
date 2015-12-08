@@ -1,0 +1,39 @@
+sample
+
+  <%= link_to @teamName.name.to_s, team_path(@teamName.name) %>
+
+<!-- jumbotron -->
+<div class="row">
+  <div class="col-xs-12">
+    <div class="jumbotron">
+      TEAM BANNER
+    </div>
+  </div>
+</div>
+
+<!-- body row -->
+<div class="row">
+  <div class="col-xs-3">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <p><%= image_tag("/team_icons/#{@teamName.name.tr(" ", "_")}_icon.png", height: '150', :style => 'margin: 10px' ) %></p>  
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-xs-6">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <p>matches</p>  
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-xs-3">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <p>schedule</p>  
+      </div>
+    </div>
+  </div>
+</div>
