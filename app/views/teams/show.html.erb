@@ -18,7 +18,6 @@
 <div>
   <container>
     <table border="2" class="rosterCard">
-                        <!--<div id="mainDiv"><div class="main-img-container"><img id='mainImage' src="http://t1.gstatic.com/images?q=tbn:ANd9GcR2hsM5gBoMh5sjUjYKd8PnDeqHLGF8ZMeSXK0Q5D6cd9qowMZ2"/></div></div>-->
           <tr>
             <td rowspan="6" class="img-container">
               <%= image_tag(@teamLogo, height: '100', id: "rosterImage", align:"left") %>
@@ -31,7 +30,7 @@
                     </div>
                   </a>
                     <% else %>
-                  <a data-iconRef=<%= ("/player_icons/#{@teamPlayer.find_by_position("Top").name.tr(" ", "_")}_icon.png") %> >
+                  <a data-iconRef=<%= ("/player_icons/#{@teamPlayer.find_by_position("Top").name.tr(" ", "_")}_icon.png") %> href="/players/<%=  @teamPlayer.find_by_position("Top").name.tr(" ", "_")%>"  >
                     <div>
                     <%= @teamPlayer.find_by_position("Top").name %>
                     </div>
@@ -51,7 +50,7 @@
                     <% else %>
                         <a data-iconRef=<%= ("/player_icons/#{@currentPlayer.name.tr(" ", "_")}_icon.png") %> href= "/players/<%= @currentPlayer.name.tr(" ", "_")%>">
                           <div>
-                            <%= @teamPlayer.find_by_position(position).name %>
+                            <%= @currentPlayer.name %>
                           </div>
                         </a>
                   <% end %>

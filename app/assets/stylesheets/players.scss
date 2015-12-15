@@ -1,3 +1,13 @@
 // Place all the styles related to the players controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.playerInfo {
+  border: 2px solid gray;
+  width: 250px;
+  text-align: center;
+}
+
+.playerName {
+  font: 40px;
+  font-weight: bold;;
+}

@@ -1,16 +1,43 @@
-sample
+<!--Players Show Page-->
 
 
-<!-- jumbotron -->
-<div class="row">
-  <div class="col-xs-12">
-    <div class="jumbotron">
-      PLAYER BANNER
-    </div>
-  </div>
+<!--Player Info Side Section-->
+<div>
+  <table class="playerInfo">
+    <tr>
+      <td align="center">
+        <%= image_tag("/player_icons/#{@playerName.name.tr(" ", "_")}_icon.png", height: '150', :style => 'margin: 10px' ) %>
+      </td>
+    </tr>
+    <tr>
+      <td class="playerName">
+        <%= @playerName.name %>
+      </td>
+    </tr>
+    <tr>
+      <td class="playerPosition">
+        Position: <%= @playerName.position %>
+      </td>
+    </tr>
+    <tr>
+      <td class="playerTeam">
+        Team: <a href="/teams/<%= @playerTeam.name.tr(" ", "%20") %>"><%= @playerTeam.name %></a>
+      </td>
+    </tr>
+    <tr>
+      <td class="playerLeague">
+        League: <%= @playerName.league %>
+      </td>
+    </tr>
+    <tr>
+      <td class="stream">
+        Stream: <a href="http://<%= @playerName.stream %>"><%= @playerName.stream %></a>
+      </td>
+    </tr>
+    
+<!--End Player Info Side Section-->
+  </table>
 </div>
-
-<!-- body row -->
 <div class="row">
   <div class="col-xs-3">
     <div class="panel panel-default">

@@ -24,7 +24,7 @@
 $( document ).ready(function() {
   
   var mainImage = $("#rosterImage");
-  $("div.img-container a").hover(function(){
+  $("tr td a").hover(function(){
      var href = $(this).attr("data-iconRef");
       $("#rosterImage").attr("src",href)
   });

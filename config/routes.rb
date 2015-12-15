@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
   resources :teams, param: :name
-  resources :players, param: :playerName
+  resources :players, param: :name
   
   get 'teams/index'
 
   get '/league' => 'teams#league'
-  get '/teams/#{:name}', to: 'teams#show'
-  get 'players/#{:playerName}', to: 'players#show'
+
+
 
   #root page
   root 'teams#index'

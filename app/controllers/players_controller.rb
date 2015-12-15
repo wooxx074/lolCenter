@@ -3,7 +3,7 @@ class PlayersController < ApplicationController
   end
   
   def show
-    @playerName = Player.find_by(name: params[:playerName])
+    @playerName = Player.find_by(name: params[:name])
     @playerTeam = Team.find_by_teamid(@playerName.teamid)
   end
 end
