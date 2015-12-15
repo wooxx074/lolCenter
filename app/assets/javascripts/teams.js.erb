@@ -1,0 +1,33 @@
+<script>
+$(".td").on({
+    mouseenter: function () {
+        <% @hoverIcon = "Balls" %>
+    },
+    mouseleave: function () {
+        <% @hoverIcon = "Cloud_9" %>
+    }
+});
+ 
+$( "td.fade" ).hover(function() {
+  $( this ).fadeOut( 100 );
+  $( this ).fadeIn( 500 );
+});
+</script>
+
+
+<script>
+ready = ->
+    var mainImage = $("#mainImage");
+    $(".img-container img").hover(function(){
+       var src = $(this).attr("src");
+        $("#mainImage").attr("src",src);
+    });
+    
+    mainImage.on("click",function(){
+        $(this).css("transform","scale(2)");
+    });
+
+
+$(document).ready(ready)
+$(document).on('page:load', ready)
+</script>

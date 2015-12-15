@@ -1,7 +1,8 @@
 class CreateMatches < ActiveRecord::Migration
   def change
     create_table :matches do |t|
-      t.text :content
+      t.text :contentexit
+      
       t.references :player, index: true, foreign_key: true
 
       t.timestamps null: false

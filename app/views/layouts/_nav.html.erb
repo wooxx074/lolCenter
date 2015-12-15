@@ -1,85 +1,63 @@
+<!--Base bootstrap navbar code-->
+
 <nav class="navbar navbar-default">
-  <div class="container-fluid">
+  <div>
     <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+    <!--<div class="navbar-header pull-left">-->
+    <!--  <button type="button" class="btn btn-default navbar-btn">-->
+    <!--    <span class="sr-only">Toggle navigation</span>-->
+    <!--    <span class="icon-bar"></span>-->
+    <!--    <span class="icon-bar"></span>-->
+    <!--    <span class="icon-bar"></span>-->
+    <!--  </button>-->
       <a class="navbar-brand" href="/home">LoLCenter</a>
-    </div>
+
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <!--Dropdown for NA LCS-->
+    <div class="navbar-header pull-left">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Explore</a></li>
+        <li class="active"><a href="/home/">Home <span class="sr-only">(current)</span></a></li>
+        <% @allLeagues.each do |league| %>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">NA LCS <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= league.first.region %> <span class="caret"></span></a>
           <ul class="dropdown-menu multi-column columns-2">
             <div class="row">
+              <!--Generate each team + icon in dropdown -->
               <% @columnNum = 1 %>
-              <% @teams.each do |team| %>
+              <% league.each do |team| %>
                   <% if @columnNum == 1 or @columnNum == 6 %>
                     <div class="col-sm-6">
       		            <ul class="multi-column-dropdown">
   	              <% end %>
-                      <li><a href="/teams/<%= team.name.gsub(" ", "%20") %>"><%= image_tag("/team_icons/#{team.name.tr(" ", "_")}_icon.png", height: '30', :style => 'margin-right: 30px') %><%= team.name %></a></li>
-                    <% if @columnNum == 5 or @columnNum == 10 %>
-      		            </ul>
-    	              </div>
-  	                <% end %>
-                      <% @columnNum += 1 %>  
-                <% end %>
+  	              <a href="/teams/<%= team.name.gsub(" ", "%20") %>">
+  	                <table>
+                      <tr class="dropdown-cell">
+                        <td>
+                          <li><%= image_tag("/team_icons/#{league.first.region.tr(" ", "_")}/#{team.name.tr(" ", "_").downcase}_logo.png", height: '50px', :style => 'margin-right: 30px') %><%= team.name %></li>
+                        </td>
+                      </tr>
+                    </table>
+                  </a>
+                  <% if @columnNum == 5 or @columnNum == 10 %>
+    		            </ul>
+  	              </div>
+	                <% end %>
+                <% @columnNum += 1 %>  
+              <% end %>
               </div>
             </ul>
           </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">EU LCS <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">LCK <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">LPL <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
+        <% end %>
       </ul>
-      <form class="navbar-form navbar-right" role="search">
+    </div>
+      
+      <form class="navbar-form" role="search" style="float:right">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
-
-    </div><!-- /.navbar-collapse -->
+    </div>
   </div><!-- /.container-fluid -->
 </nav>

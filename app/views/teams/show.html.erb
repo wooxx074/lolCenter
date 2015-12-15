@@ -1,39 +1,65 @@
-sample
-
-  <%= link_to @teamName.name.to_s, team_path(@teamName.name) %>
-
 <!-- jumbotron -->
-<div class="row">
-  <div class="col-xs-12">
-    <div class="jumbotron">
-      TEAM BANNER
-    </div>
-  </div>
+<div>
+  <container>
+    <div class="jumbotronTeam" style="height: 220px">
+      <div class="jumboBanner">
+        <div class="jumboLogo">
+          <%= image_tag("/team_icons/#{@teamName.region.tr(" ", "_")}/#{@teamName.name.tr(" ", "_").downcase}_logo.png", height: '200px') %>
+        </div>
+        <div class="jumboLogo">
+          <%= @teamName.name %>
+        </div>
+      </div> 
+    </div> 
+  </container>
 </div>
 
-<!-- body row -->
-<div class="row">
-  <div class="col-xs-3">
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <p><%= image_tag("/team_icons/#{@teamName.name.tr(" ", "_")}_icon.png", height: '150', :style => 'margin: 10px' ) %></p>  
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-xs-6">
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <p>matches</p>  
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-xs-3">
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <p>schedule</p>  
-      </div>
-    </div>
-  </div>
+<!--Roster card-->
+<div>
+  <container>
+    <table border="2" class="rosterCard">
+                        <!--<div id="mainDiv"><div class="main-img-container"><img id='mainImage' src="http://t1.gstatic.com/images?q=tbn:ANd9GcR2hsM5gBoMh5sjUjYKd8PnDeqHLGF8ZMeSXK0Q5D6cd9qowMZ2"/></div></div>-->
+          <tr>
+            <td rowspan="6" class="img-container">
+              <%= image_tag(@teamLogo, height: '100', id: "rosterImage", align:"left") %>
+            </td>
+              <td class="rosterText" class="img-container">
+                <% if @teamPlayer.find_by_position("Top").nil? %>
+                  <a data-iconRef=<%= @teamLogo %> >
+                    <div>
+                      Unknown
+                    </div>
+                  </a>
+                    <% else %>
+                  <a data-iconRef=<%= ("/player_icons/#{@teamPlayer.find_by_position("Top").name.tr(" ", "_")}_icon.png") %> >
+                    <div>
+                    <%= @teamPlayer.find_by_position("Top").name %>
+                    </div>
+                  </a>
+                  <% end %>
+              </td>
+            </tr>
+            <% @playerPosition.each do |position|%>
+              <tr>
+                <td class="rosterText" class="img-container">
+                    <% @currentPlayer = @teamPlayer.find_by_position(position) %>
+                    <%if @currentPlayer.nil? %>
+                      <a data-iconRef=<%= @teamLogo %>>
+                        <div>Unknown</div>
+                      </a>
+                      
+                    <% else %>
+                        <a data-iconRef=<%= ("/player_icons/#{@currentPlayer.name.tr(" ", "_")}_icon.png") %> href= "/players/<%= @currentPlayer.name.tr(" ", "_")%>">
+                          <div>
+                            <%= @teamPlayer.find_by_position(position).name %>
+                          </div>
+                        </a>
+                  <% end %>
+                </td>
+              </tr>
+            <% end %>
+        </table> 
+  </container>
 </div>
+<!--End roster card-->
+

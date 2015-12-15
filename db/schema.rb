@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151207034148) do
+ActiveRecord::Schema.define(version: 20151210163733) do
 
   create_table "matches", force: :cascade do |t|
     t.text     "content"
     t.integer  "player_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "matchId"
   end
 
   add_index "matches", ["player_id", "created_at"], name: "index_matches_on_player_id_and_created_at"
@@ -31,7 +32,12 @@ ActiveRecord::Schema.define(version: 20151207034148) do
     t.string   "stream"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "team_id"
+    t.string   "teamid"
+  end
+
+  create_table "players_teams", id: false, force: :cascade do |t|
+    t.integer "player_id", null: false
+    t.integer "team_id",   null: false
   end
 
   create_table "teams", force: :cascade do |t|

@@ -1,21 +1,22 @@
 Rails.application.routes.draw do
   resources :teams, param: :name
+  resources :players, param: :playerName
   
   get 'teams/index'
 
-  get 'teams/league'
-  get '/teams/#{:name}', to: 'teams#show', as: '/teamname'
-  get 'players/index'
+  get '/league' => 'teams#league'
+  get '/teams/#{:name}', to: 'teams#show'
+  get 'players/#{:playerName}', to: 'players#show'
 
   #root page
-  root 'pages#index'
+  root 'teams#index'
   #Defines routes for Pages
   get '/home' => 'pages#home' #goes straight to URL/home instead of URL/pages/home
   get '/profile' => 'pages#profile'
   get '/explore' => 'pages#explore'
   get '/player' => 'pages#player'
   get '/team' => 'pages#team'
-  get '/league' => 'pages#league'
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

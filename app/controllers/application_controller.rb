@@ -7,13 +7,20 @@ class ApplicationController < ActionController::Base
     before_filter :set_teams
     def set_teams
     @teams = Team.all.sort_by{|tm| [tm.region, tm.name]}
+    @nalcsteams = Team.where(:region => "NA LCS").sort_by{|tm| tm.name}
+    @eulcsteams = Team.where(:region => "EU LCS").sort_by{|tm| tm.name}
+    @lckteams = Team.where(:region => "LCK").sort_by{|tm| tm.name}
+    #put all teams in array for refractored navbar dropdown menus
+    @allLeagues = [@nalcsteams, @eulcsteams, @lckteams]
     end
+
+    
   def self.summInfo
     require 'net/http'
     require 'json'
     
     summonerID = 'C9Sneaky'
-    url = 'https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/'+summonerID+'?api_key=339b64ce-307b-441e-a4b6-f795401550cgit7'
+    url = 'https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/'+summonerID+'?api_key='+ENV["API_KEY"]
     
     uri = URI(url)
     response = Net::HTTP.get(uri)
@@ -39,7 +46,7 @@ class ApplicationController < ActionController::Base
   #   require 'pp'
   #   #request riot URL
   #   summonerID = 'Funkytastic'
-  #   request_uri = 'https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/'+summonerID+'?api_key=339b64ce-307b-441e-a4b6-f795401550c7'
+  #   request_uri = 'https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/'+summonerID+'?api_key=
     
   #   url = request_uri
     

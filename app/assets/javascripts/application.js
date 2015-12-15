@@ -10,8 +10,26 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+
 //= require jquery
+//= require jquery.turbolinks
 //= require bootstrap-sprockets
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
+//= require turbolinks
+
+
+//JS for roster card
+
+$( document ).ready(function() {
+  
+  var mainImage = $("#rosterImage");
+  $("div.img-container a").hover(function(){
+     var href = $(this).attr("data-iconRef");
+      $("#rosterImage").attr("src",href)
+  });
+  
+  
+});
+
+//end JS Roster Card

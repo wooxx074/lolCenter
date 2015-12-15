@@ -10,6 +10,7 @@ class CreatePlayers < ActiveRecord::Migration
       t.timestamps null: false
     end
     
-    add_index :players, [:team_id, :created_at]
+    add_index :players, [:teamid, :created_at]
+    t.references :teamid
   end
 end
